@@ -32,26 +32,16 @@ int Error=FALSE;
 int main(int argc, const char * argv[]) {
     // insert code here...
     TreeNode* syntaxTree;
-//    char pgm[120];
-//    if(argc!=2){
-//        fprintf(stderr, "usage: %s <filename>\n",argv[0]);
-//        exit(1);
-//    }
-//    strcpy(pgm, argv[1]);
-//    if(strchr(pgm, '.')==NULL)
-//        strcat(pgm, '.tiny');
-    char* pgm="/Users/admin/Desktop/example.tiny";
+    char* pgm="/Users/admin/Desktop/example.tiny";      //填写你自己的源文件目录
     source= fopen(pgm, "r");
     if(source==NULL){
         fprintf(stderr, "File %s not found\n",pgm);
         exit(1);
     }
-    listing=stdout;
+    listing=stdout;                                     //标准输出
 //    listing='/Users/admin/Desktop/examplers.txt';
     fprintf(listing, "\nTINY COMPLATION: %s\n",pgm);
-//#if NO_PARSE
     while (getToken()!=ENDFILE);
-//#endif
     fclose(source);
     return 0;
 }

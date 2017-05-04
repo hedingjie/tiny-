@@ -39,30 +39,7 @@ extern FILE* code;          //TM的编码文本
 
 extern int lineno;          //源码的行数
 
-/*****************************
- *******语法树转化**************
- ****************************/
 
-typedef enum{StmtK,ExpK} NodeKind;      //节点的种类
-typedef enum{IfK,RepeatK,AssignK,ReadK,WriteK} StmtKind;        //语句的种类
-typedef enum{OpK,ConstK,IdK} ExpKind;       //表达式的种类,用于检查表达式的种类
-typedef enum{Void,Integer,Boolean} ExpType;
-
-#define MAXCHILDREN 3
-
-typedef struct treeNode{
-    struct treeNode* child[MAXCHILDREN];
-    struct treeNode* sibling;
-    int lineno;
-    NodeKind nodeKind;
-    union{StmtKind stmt;ExpKind exp;}kind;
-    union{
-        TokenType op;
-        int val;
-        char* name;
-    }attr;
-    ExpType type;
-} TreeNode;
 
 
 /*****************************
@@ -72,12 +49,6 @@ typedef struct treeNode{
 extern int EchoSource;
 
 extern int TraceScan;
-
-extern int TraceParse;
-
-extern int TraceAnalyze;
-
-extern int TraceCode;
 
 extern int error;
 

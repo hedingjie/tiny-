@@ -66,10 +66,10 @@ static  TokenType reservedLookup(char* s){
 }
 
 /**
- * ª˘±æ µœ÷
+ * 词法扫描器的核心功能
 */
 /*
- * getTokenΩ´∑µªÿ‘¥Œƒº˛÷–µƒœ¬“ª∏ˆµ•¥ 
+ * getToken获取每一个单词
  */
 TokenType getToken(void){
 //    fprintf(stdout, "OK");
