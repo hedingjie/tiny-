@@ -1,11 +1,3 @@
-//
-//  globals.h
-//  tiny
-//
-//  Created by admin on 2017/4/10.
-//  Copyright © 2017年 admin. All rights reserved.
-//
-
 #ifndef globals_h
 #define globals_h
 
@@ -20,7 +12,7 @@
 
 #ifndef TRUE
 #define TRUE 1
-#endif
+
 
 /*MAXRESERVED=保留字的数目*/
 #define MAXRESERVED 8
@@ -38,7 +30,7 @@ extern FILE* source;        //源码文件
 extern FILE* listing;       //输出列表文件
 
 extern int lineno;          //源码的行数
-
+#endif
 
 
 

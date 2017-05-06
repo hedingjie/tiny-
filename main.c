@@ -9,7 +9,7 @@ FILE* source;
 FILE* listing;
 FILE* code;
 
-int EchoSource=TRUE;
+int EchoSource=FALSE;
 int TraceScan=TRUE;
 
 int Error=FALSE;
